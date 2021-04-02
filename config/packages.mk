@@ -18,17 +18,9 @@ PRODUCT_PACKAGES += \
     adb_root
 endif
 
-# Abstruct
-PRODUCT_PACKAGES += \
-    Abstruct
-
 # AOSP Packages
 PRODUCT_PACKAGES += \
     ThemePicker
-
-# Camera
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
 
 # Charger Images
 PRODUCT_PACKAGES += \
@@ -47,7 +39,6 @@ PRODUCT_PACKAGES += \
 
 # Paranoid Packages
 PRODUCT_PACKAGES += \
-    ParanoidPapers \
     ParanoidQuickStep
 
 ifneq ($(filter RELEASE BETA,$(PA_BUILDTYPE)),)
