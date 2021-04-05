@@ -1,3 +1,4 @@
+
 # Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,33 +13,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Check for target product
 ifeq (pa_oneplus7,$(TARGET_PRODUCT))
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# Inherit device configuration
+# Inherit from the custom device configuration.
 $(call inherit-product, device/oneplus/oneplus7/device.mk)
 
-# Inherit common PA configuration
+# Inherit from the AOSPA configuration.
 $(call inherit-product, vendor/pa/config/common_full_phone.mk)
 
-# Override build properties
-PRODUCT_NAME := pa_oneplus7
-PRODUCT_DEVICE := oneplus7
+TARGET_BOOT_ANIMATION_RES := 1080
+
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := OnePlus 7
+PRODUCT_DEVICE := oneplus7
 PRODUCT_MANUFACTURER := OnePlus
+PRODUCT_MODEL := OnePlus 7
+PRODUCT_NAME := pa_oneplus7
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=OnePlus7 \
-    PRODUCT_NAME=OnePlus7 \
-    PRIVATE_BUILD_DESC="OnePlus7-user 10 QKQ1.190716.003 2003130755 release-keys"
 
 endif
