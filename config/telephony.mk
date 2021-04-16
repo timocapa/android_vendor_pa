@@ -45,7 +45,6 @@ PRODUCT_BOOT_JARS += tcmiface
 
 # Telephony packages
 PRODUCT_PACKAGES += \
-    Stk \
     CellBroadcastReceiver
 
 # Tethering
