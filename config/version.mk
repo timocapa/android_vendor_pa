@@ -68,6 +68,9 @@ PA_VERSION := $(shell echo $(PA_VERSION_FLAVOR) | tr A-Z a-z)-$(PA_VERSION_CODE)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.pa.version=$(PA_VERSION)
 
+# Dev keys the lazy way
+PRODUCT_DEFAULT_DEV_CERTIFICATE := keys/releasekey
+
 # Paranoid Android Platform Display Version
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.pa.version.flavor=$(PA_VERSION_FLAVOR) \
